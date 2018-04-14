@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('onepage');
-});
+Route::any('/', "OnepageController@home");

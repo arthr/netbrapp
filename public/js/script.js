@@ -96,7 +96,7 @@
     var b = e(".content-popup");
     b.length > 0 && b.magnificPopup({
         type: "inline",
-        preloader: !0,
+        preloader: true,
         removalDelay: 400,
         mainClass: "mfp-fade bg-team-exp"
     });
@@ -105,8 +105,8 @@
     w.length > 0 && w.magnificPopup({
         type: "iframe",
         removalDelay: 160,
-        preloader: !0,
-        fixedContentPos: !1,
+        preloader: true,
+        fixedContentPos: false,
         callbacks: {
             beforeOpen: function () {
                 this.st.image.markup = this.st.image.markup.replace("mfp-figure", "mfp-figure mfp-with-anim"), this.st.mainClass = this.st.el.attr("data-effect")

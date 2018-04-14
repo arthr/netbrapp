@@ -115,7 +115,7 @@
                 </div>
             </div>
         </div> -->
-        <a href="#intro" class="scroll-down menu-link">SCROLL DOWN</a>
+        <a href="#home" class="scroll-down menu-link">SCROLL DOWN</a>
     </header>
     <div class="section section-pad section-bg section-pro nopb into-section" id="home">
         <div class="container">
@@ -211,7 +211,9 @@
                     <div class="team-member animated" data-animate="fadeInUp" data-delay=".2">
                         <div class="team-photo">
                             <img src="images/team-a-sq.png" alt="team">
-                            <a href="#team-profile-1" class="expand-trigger content-popup"></a>
+                            <a href="#team-profile-1" class="expand-trigger content-popup">
+                                <span>1MB</span>
+                            </a>
                         </div>
                         <div class="team-info">
                             <h5 class="team-name">Basic 1MB</h5>
@@ -317,7 +319,9 @@
                     <div class="team-member animated" data-animate="fadeInUp" data-delay=".3">
                         <div class="team-photo">
                             <img src="images/team-a-sq.png" alt="team">
-                            <a href="#team-profile-2" class="expand-trigger content-popup"></a>
+                            <a href="#team-profile-2" class="expand-trigger content-popup">
+                                <span>1MB</span>
+                            </a>
                         </div>
 
                         <div class="team-info">
@@ -424,7 +428,9 @@
                     <div class="team-member animated" data-animate="fadeInUp" data-delay=".4">
                         <div class="team-photo">
                             <img src="images/team-a-sq.png" alt="team">
-                            <a href="#team-profile-3" class="expand-trigger content-popup"></a>
+                            <a href="#team-profile-3" class="expand-trigger content-popup">
+                                <span>1MB</span>
+                            </a>
                         </div>
 
                         <div class="team-info">
@@ -531,7 +537,9 @@
                     <div class="team-member animated" data-animate="fadeInUp" data-delay=".5">
                         <div class="team-photo">
                             <img src="images/team-a-sq.png" alt="team">
-                            <a href="#team-profile-4" class="expand-trigger content-popup"></a>
+                            <a href="#team-profile-4" class="expand-trigger content-popup">
+                                <span>1MB</span>
+                            </a>
                         </div>
 
                         <div class="team-info">
@@ -650,7 +658,9 @@
                             <div class="team-member animated" data-animate="fadeInUp" data-delay=".1">
                                 <div class="team-photo">
                                     <img src="images/team-a-sq.png" alt="team">
-                                    <a href="#team-profile-5" class="expand-trigger content-popup"></a>
+                                    <a href="#team-profile-5" class="expand-trigger content-popup">
+                                        <span>1MB</span>
+                                    </a>
                                 </div>
                                 <div class="team-info">
                                     <h5 class="team-name">Basic 1MB</h5>
@@ -755,7 +765,9 @@
                             <div class="team-member animated" data-animate="fadeInUp" data-delay=".2">
                                 <div class="team-photo">
                                     <img src="images/team-a-sq.png" alt="team">
-                                    <a href="#team-profile-6" class="expand-trigger content-popup"></a>
+                                    <a href="#team-profile-6" class="expand-trigger content-popup">
+                                        <span>1MB</span>
+                                    </a>
                                 </div>
                                 <div class="team-info">
                                     <h5 class="team-name">Basic 1MB</h5>
@@ -860,7 +872,9 @@
                             <div class="team-member animated" data-animate="fadeInUp" data-delay=".3">
                                 <div class="team-photo">
                                     <img src="images/team-a-sq.png" alt="team">
-                                    <a href="#team-profile-7" class="expand-trigger content-popup"></a>
+                                    <a href="#team-profile-7" class="expand-trigger content-popup">
+                                        <span>1MB</span>
+                                    </a>
                                 </div>
                                 <div class="team-info">
                                     <h5 class="team-name">Basic 1MB</h5>
@@ -997,7 +1011,8 @@
                     </ul>
                 </div>
                 <div class="col-lg-5">
-                    <form id="contact-form" class="form-message text-left" action="" method="post" novalidate="novalidate">
+                    <form id="contact-form" class="form-message text-left" action method="post" novalidate="novalidate">
+                        {{ csrf_field() }}
                         <div class="form-results"></div>
                         <div class="input-field animated" data-animate="fadeInUp" data-delay=".3">
                             <input name="contact-name" type="text" class="input-line required" aria-required="true">
@@ -1136,13 +1151,13 @@
                 <div class="col-xl-4">
                     <ul class="link-widget animated" data-animate="fadeInUp" data-delay=".8">
                         <li>
-                            <a href="#" class="menu-link">NETBR TELECOM</a>
+                            <a href="#home" class="menu-link">NETBR TELECOM</a>
                         </li>
                         <li>
-                            <a href="#" class="menu-link">Planos</a>
+                            <a href="#plans" class="menu-link">Planos</a>
                         </li>
                         <li>
-                            <a href="#" class="menu-link">Contato</a>
+                            <a href="#contact" class="menu-link">Contato</a>
                         </li>
                         <li>
                             <a href="#" class="menu-link">Área do Cliente</a>

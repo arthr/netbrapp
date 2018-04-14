@@ -1,10 +1,9 @@
 /*!
-Template :	ICO Crypto - Cryptocurrency Landing Template
-Author	 :	Softnio
-Version	 :	1.1.2
-Updated	 :	03.20.2018
+Template :	NETBR TELECOM
+Author	 :	Arthur Morais
+Version	 :	1.0.0
+Updated	 :	04.14.2018
 */
-
 
 /*! 01.0 - FONTS */
 
@@ -47,7 +46,6 @@ Updated	 :	03.20.2018
 	font-weight: normal;
 	font-style: normal
 }
-
 
 /*! 02.0 - RESET */
 
@@ -537,9 +535,12 @@ a:active {
 
 .section-bg.section-gradiant,
 .section-bg-alt.section-gradiant {
-	background-image: -webkit-linear-gradient(top left, #290075 0%, #086ddf 100%);
+	/* background-image: -webkit-linear-gradient(top left, #290075 0%, #086ddf 100%);
 	background-image: -o-linear-gradient(top left, #290075 0%, #086ddf 100%);
-	background-image: linear-gradient(to bottom right, #290075 0%, #086ddf 100%)
+	background-image: linear-gradient(to bottom right, #290075 0%, #086ddf 100%) */
+	background-image: -webkit-linear-gradient(top left, #16a3fe 0%, #41faa4 100%);
+	background-image: -o-linear-gradient(top left, #16a3fe 0%, #41faa4 100%);
+	background-image: linear-gradient(to right, #16a3fe 0%, #41faa4 100%)
 }
 
 .section-bg.section-gradiant:after,
@@ -951,7 +952,6 @@ blockquote.color-alt-primary {
 		margin-top: 5px
 	}
 }
-
 
 /*! 03.0 - UTILITY */
 
@@ -1820,7 +1820,6 @@ hr:last-child,
 	}
 }
 
-
 /*! 04.0 - COMMON */
 
 .section-head {
@@ -1882,7 +1881,7 @@ hr:last-child,
 .section-head-s2 .heading-xs {
 	position: relative;
 	text-transform: uppercase;
-	color: #7ab9ff;
+	color: yellow;
 	letter-spacing: 0.2em;
 	z-index: 2
 }
@@ -2657,7 +2656,6 @@ select:focus {
 	padding: 6px 20px;
 	transition: all .5s ease
 }
-
 
 /*! 06.0 - HEADER SECTION */
 
@@ -3577,7 +3575,6 @@ select:focus {
 	}
 }
 
-
 /*! 05.0 - BUTTONS */
 
 .btn {
@@ -4059,7 +4056,6 @@ select:focus {
 	}
 }
 
-
 /*! 07.0 - FEATURES SECTION */
 
 .text-block p:not(.lead) {
@@ -4180,7 +4176,6 @@ select:focus {
 		max-width: 160px
 	}
 }
-
 
 /*! 08.0 - TOKEN SECTION */
 
@@ -4439,7 +4434,6 @@ select:focus {
 .single-chart h4 {
 	padding-bottom: 40px
 }
-
 
 /*! 09.0 - ROADMAP SECTION */
 
@@ -4873,7 +4867,6 @@ select:focus {
 	}
 }
 
-
 /*! 10.0 - TEAM SECTION */
 
 .io-azure .team-section {
@@ -4923,7 +4916,7 @@ select:focus {
 	top: -50px;
 	left: -38px;
 	transition: all .5s ease;
-	
+	border-radius: 50%;
 }
 
 .team-member .team-photo img {
@@ -4931,13 +4924,15 @@ select:focus {
 }
 
 .team-member .team-photo:before {
+	z-index: -1;
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	height: 100%;
 	width: 100%;
 	content: "";
-	background-image: linear-gradient(to top left, rgba(41, 0, 117, 0.65) 0%, rgba(9, 109, 223, 0.65) 100%);
+	/* background-image: linear-gradient(to top left, rgba(41, 0, 117, 0.65) 0%, rgba(9, 109, 223, 0.65) 100%); */
+	background-image: linear-gradient(to top left, rgba(26, 172, 246, 0.65) 0%, rgb(64, 248, 166) 100%);
 	transition: all .5s ease;
 	border-radius: 50%;
 }
@@ -4949,8 +4944,10 @@ select:focus {
 	content: "";
 	height: 3px;
 	width: 65px;
-	background-image: -webkit- linear-gradient(to right, #2b56f5 0%, #46bdf4 100%);
-	background-image: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%);
+	background-image: -webkit- linear-gradient(to right, #ffff00 0%, #f3b325 100%);
+	background-image: linear-gradient(to right, #ffff00 0%, #f3b325 100%);
+	/* background-image: -webkit- linear-gradient(to right, #2b56f5 0%, #46bdf4 100%);
+	background-image: linear-gradient(to right, #2b56f5 0%, #46bdf4 100%); */
 	transition: all .5s ease;
 }
 
@@ -4963,11 +4960,23 @@ select:focus {
 }
 
 .team-member .team-photo:hover {
-	top: -60px
+	top: -60px;
+	box-shadow: inset 0 0 0 5px #ffb100;
 }
 
 .team-member .team-photo:hover:before {
 	opacity: .5
+}
+
+.team-member .team-photo a span {
+	position: relative;
+	display: block;
+	top: 65%;
+	margin: auto;
+	font-size: 25px;
+	font-weight: bold;
+	color: yellow;
+	width: 50px;
 }
 
 .team-member .team-name {
@@ -5308,7 +5317,6 @@ select:focus {
 	background-image: linear-gradient(to right, #46bdf4 0%, #7a0fff 100%)
 }
 
-
 /*! 11.0 - Partner Section */
 
 .partner-list {
@@ -5387,7 +5395,6 @@ select:focus {
 		text-align: center
 	}
 }
-
 
 /*! 12.0 - FAQ SECTION */
 
@@ -5533,7 +5540,6 @@ select:focus {
 .io-azure .section-pro-alt .single-faq p {
 	color: #637097
 }
-
 
 /*! 13.0 - CONTACT SECTION */
 
@@ -5736,7 +5742,6 @@ select:focus {
 .theme-light .form-message .input-field .input-line {
 	color: #3c3c3c
 }
-
 
 /*! 14.0 - FOOTER SECTION */
 
@@ -5989,7 +5994,6 @@ select:focus {
 .footer-links li a:hover {
 	color: #fff
 }
-
 
 /*! 15.0 - ANIMATION CSS */
 
@@ -6772,7 +6776,6 @@ select:focus {
 	}
 }
 
-
 /*! 16.0 - BLOG SECTION/PAGES */
 
 .blog-section .section-head,
@@ -7481,4 +7484,46 @@ select:focus {
 .io-azure .section-pro .search-form button:hover {
 	background: rgba(70, 189, 244, 0.8);
 	color: #fff
+}
+
+/* overlay at start */
+
+.mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	transition: all 0.15s ease-out;
+}
+
+/* overlay animate in */
+
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.8;
+}
+
+/* overlay animate out */
+
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+
+/* content at start */
+
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	transition: all 0.15s ease-out;
+}
+
+/* content animate it */
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+
+/* content animate out */
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
 }
