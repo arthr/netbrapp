@@ -4034,6 +4034,10 @@ select:focus {
 	margin: 10px 15px
 }
 
+.btns li.upDown {
+	animation: upDown 2s infinite;
+}
+
 .btns li a:not(.btn) {
 	margin-right: 10px
 }

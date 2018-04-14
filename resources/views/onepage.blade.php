@@ -65,7 +65,7 @@
                                 <p class="lead animated" data-animate="fadeInUp" data-delay="1.65">In sit amet quam ac augue sollicitudin
                                     <br class="d-none d-xl-block"> Nullam quis ultricies nisi </p>
                                 <ul class="btns animated" data-animate="fadeInUp" data-delay="1.75">
-                                    <li>
+                                    <li class="animated" data-animate="upDown">
                                         <a href="#" class="btn btn-alt">ASSINE AGORA</a>
                                     </li>
                                 </ul>
@@ -1011,19 +1011,19 @@
                     </ul>
                 </div>
                 <div class="col-lg-5">
-                    <form id="contact-form" class="form-message text-left" action method="post" novalidate="novalidate">
+                    <form id="contact-form" class="form-message text-left" action="{{ route('subscribe') }}" method="post" novalidate="novalidate">
                         {{ csrf_field() }}
                         <div class="form-results"></div>
                         <div class="input-field animated" data-animate="fadeInUp" data-delay=".3">
-                            <input name="contact-name" type="text" class="input-line required" aria-required="true">
+                            <input name="name" type="text" class="input-line required" aria-required="true">
                             <label class="input-title">Seu Nome</label>
                         </div>
                         <div class="input-field animated" data-animate="fadeInUp" data-delay=".4">
-                            <input name="contact-email" type="email" class="input-line required email" aria-required="true">
+                            <input name="email" type="email" class="input-line required email" aria-required="true">
                             <label class="input-title">Seu Email</label>
                         </div>
                         <div class="input-field animated" data-animate="fadeInUp" data-delay=".5">
-                            <textarea name="contact-message" class="txtarea input-line required" aria-required="true"></textarea>
+                            <textarea name="message" class="txtarea input-line required" aria-required="true"></textarea>
                             <label class="input-title">Sua Mensagem</label>
                         </div>
                         <input type="text" class="d-none" name="form-anti-honeypot" value="">

@@ -191,7 +191,7 @@
     }), e("#particles-js").length > 0 && particlesJS("particles-js", {
         particles: {
             number: {
-                value: 50,
+                value: 70,
                 density: {
                     enable: !0,
                     value_area: 800
@@ -263,7 +263,7 @@
             events: {
                 onhover: {
                     enable: !0,
-                    mode: "repulse"
+                    mode: "none"
                 },
                 onclick: {
                     enable: !0,
