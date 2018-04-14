@@ -1,7 +1,7 @@
 {
-    "name": "app/netbrtelecom",
+    "name": "arthr/netbrtelecom",
     "description": "NETBRTELECOM CRM",
-    "keywords": ["netbrtelecom", "laravel"],
+    "keywords": ["netbrtelecom", "crm", "laravel"],
     "license": "MIT",
     "type": "project",
     "require": {
