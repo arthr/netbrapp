@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateAtributosTable extends Migration
 {
@@ -15,7 +15,16 @@ class CreateAtributosTable extends Migration
     {
         Schema::create('atributos', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('plano_id');
+            $table->foreign('plano_id')
+                ->references('id')
+                ->on('planos')
+                ->onDelete('cascade');
+            $table->string('nome');
+            $table->text('descricao')->nullable();
+            $table->boolean('ativo');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

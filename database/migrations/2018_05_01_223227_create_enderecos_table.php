@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateEnderecosTable extends Migration
 {
@@ -17,18 +17,19 @@ class CreateEnderecosTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('cliente_id');
             $table->foreign('cliente_id')
-                    ->references('id')
-                    ->on('clientes')
-                    ->onDelete('cascade');
+                ->references('id')
+                ->on('clientes')
+                ->onDelete('cascade');
             $table->string('endereco');
             $table->string('numero');
-            $table->string('complemento');
+            $table->string('complemento')->nullable();
             $table->string('bairro');
             $table->string('cidade');
             $table->string('estado');
-            $table->integer('cep', 8);
-            $table->string('status', 15);
+            $table->integer('cep');
+            $table->enum('tipo', ['residencial', 'cobranca', 'comercial', 'outros']);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
