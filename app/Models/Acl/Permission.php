@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models\Acl;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Pedido extends Model
+class Permission extends Model
 {
     //
 }
