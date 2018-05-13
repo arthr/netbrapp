@@ -12,7 +12,9 @@ class OnepageController extends Controller
 
         if (Auth::check()) {
             $user = Auth::user();
-            $dump = [$user->getAllPermissions()->pluck('name'), $user->getRoleNames()];
+            $cliente = $user->cliente;
+            $enderecos = $cliente->enderecos->pluck('endereco');
+            $dump = [$user->getAllPermissions()->pluck('name'), $user->getRoleNames(), $cliente->pluck('nome'), $enderecos];
             dd($dump);
         }
 

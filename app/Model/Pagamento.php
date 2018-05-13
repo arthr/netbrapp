@@ -2,15 +2,17 @@
 
 namespace App\Model;
 
+use App\Model\Metodo;
+use App\Model\Pedido;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Pagamento extends Model
 {
     use SoftDeletes;
-    
+
     /**
-     * The attributes that are mass assignable.
+     * Atributos que são atribuíveis em massa.
      *
      * @var array
      */
@@ -19,7 +21,7 @@ class Pagamento extends Model
     ];
 
     /**
-     * The attributes that are not mass assignable.
+     * Atributos que não são atribuíveis em massa.
      *
      * @var array
      */
@@ -28,11 +30,32 @@ class Pagamento extends Model
     ];
 
     /**
-     * The attributes that should be mutated to dates.
+     * Atributos que devem ser transformados em datas.
      *
      * @var array
      */
     protected $dates = [
         'deleted_at',
     ];
+
+    /**
+     * Obtem o registro de metodo associado ao pagamento.
+     *
+     * @return App\Model\Metodo
+     */
+    public function metodo()
+    {
+        return $this->hasOne(Metodo::class);
+    }
+
+    /**
+     * Obtem o registro de pedido associado ao pagamento.
+     *
+     * @return App\Model\Pedido
+     */
+    public function pedido()
+    {
+        return $this->belongsTo(Pedido::class);
+    }
+
 }

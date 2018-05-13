@@ -2,6 +2,9 @@
 
 namespace App\Model;
 
+use App\Model\Cliente;
+use App\Model\Pedido;
+use App\Model\Plano;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -10,7 +13,7 @@ class Assinatura extends Model
     use SoftDeletes;
 
     /**
-     * The attributes that are mass assignable.
+     * Atributos que são atribuíveis em massa.
      *
      * @var array
      */
@@ -19,7 +22,7 @@ class Assinatura extends Model
     ];
 
     /**
-     * The attributes that are not mass assignable.
+     * Atributos que não são atribuíveis em massa.
      *
      * @var array
      */
@@ -28,11 +31,41 @@ class Assinatura extends Model
     ];
 
     /**
-     * The attributes that should be mutated to dates.
+     * Atributos que devem ser transformados em datas.
      *
      * @var array
      */
     protected $dates = [
         'inicio', 'final', 'deleted_at',
     ];
+
+    /**
+     * Obtem o registro de cliente associado a assinatura.
+     *
+     * @return App\Model\Cliente
+     */
+    public function cliente()
+    {
+        return $this->belongsTo(Cliente::class);
+    }
+
+    /**
+     * Obtem o registro de pedido associado a assinatura.
+     *
+     * @return App\Model\Pedido
+     */
+    public function pedido()
+    {
+        return $this->belongsTo(Pedido::class);
+    }
+
+    /**
+     * Obtem o registro de plano associado a assinatura.
+     *
+     * @return App\Model\Plano
+     */
+    public function plano()
+    {
+        return $this->belongsTo(Plano::class);
+    }
 }

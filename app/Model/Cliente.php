@@ -2,15 +2,17 @@
 
 namespace App\Model;
 
+use App\Model\Endereco;
+use App\Model\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Cliente extends Model
 {
     use SoftDeletes;
-    
+
     /**
-     * The attributes that are mass assignable.
+     * Atributos que são atribuíveis em massa.
      *
      * @var array
      */
@@ -20,7 +22,7 @@ class Cliente extends Model
     ];
 
     /**
-     * The attributes that are not mass assignable.
+     * Atributos que não são atribuíveis em massa.
      *
      * @var array
      */
@@ -29,11 +31,31 @@ class Cliente extends Model
     ];
 
     /**
-     * The attributes that should be mutated to dates.
+     * Atributos que devem ser transformados em datas.
      *
      * @var array
      */
     protected $dates = [
         'deleted_at',
     ];
+
+    /**
+     * Obtem o registro de usuário associado ao cliente.
+     *
+     * @return App\Model\User
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Obtem os registros de endereços associados ao cliente.
+     *
+     * @return App\Model\Cliente
+     */
+    public function enderecos()
+    {
+        return $this->hasMany(Endereco::class);
+    }
 }

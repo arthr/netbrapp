@@ -2,12 +2,13 @@
 
 namespace App\Model;
 
+use App\Model\Metodo;
 use Illuminate\Database\Eloquent\Model;
 
 class DadosMetodo extends Model
 {
     /**
-     * The attributes that are mass assignable.
+     * Atributos que são atribuíveis em massa.
      *
      * @var array
      */
@@ -20,12 +21,22 @@ class DadosMetodo extends Model
     ];
 
     /**
-     * The attributes that are not mass assignable.
+     * Atributos que não são atribuíveis em massa.
      *
      * @var array
      */
     protected $guarded = [
         'metodo_id',
     ];
+
+    /**
+     * Obtem o registro de metodo associado ao dado de metodo.
+     *
+     * @return App\Model\Metodo
+     */
+    public function metodo()
+    {
+        return $this->belongsTo(Metodo::class);
+    }
 
 }

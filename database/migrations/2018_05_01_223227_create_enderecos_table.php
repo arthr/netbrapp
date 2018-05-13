@@ -26,7 +26,7 @@ class CreateEnderecosTable extends Migration
             $table->string('bairro');
             $table->string('cidade');
             $table->string('estado');
-            $table->integer('cep');
+            $table->string('cep', 8);
             $table->enum('tipo', ['residencial', 'cobranca', 'comercial', 'outros']);
             $table->timestamps();
             $table->softDeletes();
