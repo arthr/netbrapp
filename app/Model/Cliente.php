@@ -83,7 +83,7 @@ class Cliente extends Model
     }
 
     /**
-     * Obtem os regisotrs de pagamentos associados ao cliente.
+     * Obtem os registros de pagamentos associados ao cliente através do pedido.
      *
      * @return App\Model\Pagamento
      */
