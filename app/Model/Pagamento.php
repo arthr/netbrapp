@@ -45,7 +45,7 @@ class Pagamento extends Model
      */
     public function metodo()
     {
-        return $this->hasOne(Metodo::class);
+        return $this->belongsTo(Metodo::class);
     }
 
     /**

@@ -4,6 +4,8 @@ namespace App\Model;
 
 use App\Model\Assinatura;
 use App\Model\Endereco;
+use App\Model\Pagamento;
+use App\Model\Pedido;
 use App\Model\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -78,5 +80,15 @@ class Cliente extends Model
     public function pedidos()
     {
         return $this->hasMany(Pedido::class);
+    }
+
+    /**
+     * Obtem os regisotrs de pagamentos associados ao cliente.
+     *
+     * @return App\Model\Pagamento
+     */
+    public function pagamentos()
+    {
+        return $this->hasManyThrough(Pagamento::class, Pedido::class);
     }
 }

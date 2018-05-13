@@ -15,13 +15,19 @@ class OnepageController extends Controller
             $cliente = $user->cliente;
             $enderecos = $cliente->enderecos->pluck('endereco');
             $pedidos = $cliente->pedidos;
+            $assinaturas = $cliente->assinaturas;
+            $pagamentos = $cliente->pagamentos()->with('metodo')->get();
+            $metodo = $pagamentos->first()->metodo()->with('dados')->get();
 
             $dump = [
                 $user->getAllPermissions()->pluck('name'),
                 $user->getRoleNames(),
                 $cliente->pluck('nome'),
                 $enderecos,
-                $pedidos
+                $pedidos,
+                $assinaturas,
+                $pagamentos,
+                $metodo
             ];
 
             dd($dump);
