@@ -3,11 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class OnepageController extends Controller
 {
     public function home(Request $request)
     {
+
+        // $role = Role::create(['name' => 'administrator']);
+        // $permissions = [
+        //     Permission::create(['name' => 'view']),
+        //     Permission::create(['name' => 'create']),
+        //     Permission::create(['name' => 'edit']),
+        //     Permission::create(['name' => 'delete'])
+        // ];
+        // $role->syncPermissions($permissions);
+
+        if(Auth::check()){
+            $user = Auth::user();
+            dd($user->getAllPermissions());
+        }
+
         return view('onepage');
     }
 
