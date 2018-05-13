@@ -20,7 +20,7 @@ class CreateDadosMetodosTable extends Migration
                 ->references('id')
                 ->on('metodos')
                 ->onDelete('cascade');
-            $table->enum('tipo', ['avista', 'aprazo']);
+            $table->enum('tipo', ['avista', 'aprazo'])->nullable();
             $table->string('banco', 10)->nullable()->comment = '001 = Banco do Brasil - www.codigobanco.com';
             $table->string('agencia', 10)->nullable();
             $table->string('conta', 20)->nullable();
@@ -31,9 +31,9 @@ class CreateDadosMetodosTable extends Migration
             $table->integer('tarifa')->nullable()->comment = 'Tarifa por custo do serviço';
             $table->boolean('debito_automatico');
             $table->boolean('recorrente');
-            $table->integer('frequencia')->nullable()->comment = 'No caso de pagamento recorrente, a frequêcia deve ser informada em dias';
-            $table->text('descricao');
-            $table->text('observacao');
+            $table->integer('frequencia')->default(0)->comment = 'No caso de pagamento recorrente, a frequêcia deve ser informada em dias';
+            $table->text('descricao')->nullable();
+            $table->text('observacao')->nullable();
             $table->string('token')->nullable();
             $table->string('refresh_token')->nullable();
             $table->timestamps();
