@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="images/favicon.png">
     <title>NETBR TELECOM</title>
     <link rel="stylesheet" href="css/vendor.bundle.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/theme-java.css" id="layoutstyle">
 </head>
 
@@ -1011,7 +1011,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-5">
-                    <form id="contact-form" class="form-message text-left" action="{{ route('subscribe') }}" method="post" novalidate="novalidate">
+                    <form id="contact-form" class="form-message text-left" action="" method="post" novalidate="novalidate">
                         {{ csrf_field() }}
                         <div class="form-results"></div>
                         <div class="input-field animated" data-animate="fadeInUp" data-delay=".3">

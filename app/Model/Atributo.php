@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Assinatura extends Model
+class Atributo extends Model
 {
     //
 }

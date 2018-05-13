@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Acl;
+namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Permission extends Model
+class Metodo extends Model
 {
     //
 }
