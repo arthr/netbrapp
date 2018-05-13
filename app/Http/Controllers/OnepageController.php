@@ -14,7 +14,16 @@ class OnepageController extends Controller
             $user = Auth::user();
             $cliente = $user->cliente;
             $enderecos = $cliente->enderecos->pluck('endereco');
-            $dump = [$user->getAllPermissions()->pluck('name'), $user->getRoleNames(), $cliente->pluck('nome'), $enderecos];
+            $pedidos = $cliente->pedidos;
+
+            $dump = [
+                $user->getAllPermissions()->pluck('name'),
+                $user->getRoleNames(),
+                $cliente->pluck('nome'),
+                $enderecos,
+                $pedidos
+            ];
+
             dd($dump);
         }
 

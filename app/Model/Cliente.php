@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use App\Model\Assinatura;
 use App\Model\Endereco;
 use App\Model\User;
 use Illuminate\Database\Eloquent\Model;
@@ -57,5 +58,25 @@ class Cliente extends Model
     public function enderecos()
     {
         return $this->hasMany(Endereco::class);
+    }
+
+    /**
+     * Obtem os registros de assinaturas associados ao cliente.
+     *
+     * @return App\Model\Assinatura
+     */
+    public function assinaturas()
+    {
+        return $this->hasMany(Assinatura::class);
+    }
+
+    /**
+     * Obtem os registros de pedidos associados ao cliente.
+     *
+     * @return App\Model\Pedidos
+     */
+    public function pedidos()
+    {
+        return $this->hasMany(Pedido::class);
     }
 }
